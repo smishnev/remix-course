@@ -1,6 +1,6 @@
 import { redirect } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
-import NewNote, {links as newNoteLinks} from "~/components/newNote/NewNote"
+import NewNote, {links as newNoteLinks} from "~/components/NewNote/NewNote"
 import NewList, {links as newNoteListLinks} from "~/components/NoteList/NoteList"
 import { getStoredNotes, storeNotes } from '~/data/notes';
 
