@@ -3,7 +3,7 @@ import { Link } from '@remix-run/react';
 import homeStyles from '~/styles/home.css'
 
 export const meta: V2_MetaFunction = () => {
-  return [{ title: "New Remix App" }];
+  return [{ title: "Home Remix App Course" }];
 };
 
 export const links = () => [{ rel: "stylesheet", href: homeStyles }];

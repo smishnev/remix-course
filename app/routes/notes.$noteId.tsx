@@ -1,4 +1,4 @@
-import { LoaderArgs, json } from '@remix-run/node';
+import { LoaderArgs, V2_MetaFunction, json } from '@remix-run/node';
 import { Link, useLoaderData } from '@remix-run/react';
 import { getStoredNotes } from '~/data/notes';
 import styles from '~/styles/note-details.css';
@@ -8,6 +8,10 @@ type notesPropsItem = {
 	title: string;
 	content: string;
 }
+
+export const meta: V2_MetaFunction = ({data}) => {
+  return [{ title: data.title }];
+};
 
 export default function NoteDetailsPage() {
   const note = useLoaderData();

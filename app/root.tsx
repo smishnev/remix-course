@@ -6,10 +6,15 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  V2_MetaFunction,
   useCatch,
 } from "@remix-run/react";
 import styles from '~/styles/main.css'
 import MainNavigation from "~/components/MainNavigation/MainNavigation";
+
+export const meta: V2_MetaFunction = () => {
+  return [{ title: "Remix App Course" }];
+};
 
 export const links = () => [{ rel: "stylesheet", href: styles }];
 
