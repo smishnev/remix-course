@@ -14,10 +14,13 @@ export async function action ({request}: any) {
 	// 	title: formData.get('title'),
 	// 	content: formData.get('content'),
 	// }
-
 	const noteData = Object.fromEntries(formData)
 
-	// Add validation
+	// Validation
+
+	if (noteData.title.trim().length < 5) {
+		return { message: 'Invalid title - must be at least 5 characters long'}
+	}
 
 	const existingNotes = await getStoredNotes();
 	noteData.id = new Date().toISOString();
