@@ -6,7 +6,7 @@ type notesPropsItem = {
 	content: string;
 }
 
-function NoteList({ notes }: {notes: notesPropsItem[]} ) {
+function NoteList({ notes }: {notes:notesPropsItem[]} ) {
   return (
     <ul id="note-list">
       {notes.map((note, index) => (
